@@ -24,7 +24,7 @@ function formatYear(v){
 
 export default function DatePickers(){
     const classes = useStyles();
-    const [newvalue,value]=useState("民國    年-  月-  號")
+    const [newvalue,value]=useState("民國110年-05月-24號")
     //var changeyear = DatePicker(year);
     //function change() = formatYear();
 
@@ -40,10 +40,9 @@ export default function DatePickers(){
                 InputLabelProps={{
                     shrink: true,
                 }}
-                onChange={(newValue) => {
-                    value(formatYear(newValue.target.value));
+                onChange={ (event) => {
+                    value(formatYear(event.target.value));
                 }}
-                value={value}
             />
             <TextField
                 id="chdate"
